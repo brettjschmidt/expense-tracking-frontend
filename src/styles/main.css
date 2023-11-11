@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Raleway:wght@400;500&display=swap');
+
+
+:root {
+    --primary: #c0c0c0;
+    --secondary: #800080;
+    --accent: #000000;
+    --error: #f62817;
+}
+
+* {
+    font-family: "Inconsolata", monospace;
+}
+

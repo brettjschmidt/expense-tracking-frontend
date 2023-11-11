@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+    createBrowserRouter,
+    Route,
+    createRoutesFromElements,
+    RouterProvider,
+} from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+
+
+// styles
+import "./styles/main.css";
+import "./styles/home.css";
+import "./styles/form.css";
+import "./styles/navbar.css";
+import "react-toastify/dist/ReactToastify.css";
+
+// layouts
+import CoreLayout from "./layouts/CoreLayout";
+
+// Pages
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+
+
+
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" element={<CoreLayout />} errorElement={<Error />}>
+            <Route index element={<Home />}></Route>
+        </Route>
+    )
+);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <RouterProvider router={router} />
+            <ToastContainer />
+        </div>
+    );
 }
 
 export default App;

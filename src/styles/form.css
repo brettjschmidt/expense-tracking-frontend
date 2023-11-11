@@ -1,0 +1,55 @@
+.income-form-text h3 {
+    color: var(--secondary);
+}
+
+.expense-form-text h3 {
+    color: var(--secondary);
+}
+
+label, input, select {
+    display: block;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 1fr;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 172px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background: var(--primary);
+    margin: 20px 0;
+    width: 172px;
+    border: 1px solid var(--accent);
+    padding: 10px;
+    font-family: "Raleway";
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+div.error {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+input.error {
+    border: 1px solid var(--error);
+}
